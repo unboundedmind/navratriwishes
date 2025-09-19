@@ -1,0 +1,375 @@
+/* General Body and Fonts */
+body {
+    margin: 0;
+    font-family: 'Poppins', sans-serif;
+    background: linear-gradient(135deg, #fceabb, #f8b500);
+    color: #333;
+    overflow-x: hidden;
+    position: relative;
+    transition: none;
+}
+
+/* Coming Soon Section Styling (Default State) */
+.pre-festival-content {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+    text-align: center;
+    background: linear-gradient(135deg, #fceabb, #f8b500);
+}
+
+.coming-soon-message {
+    font-family: 'Dancing Script', cursive;
+    font-size: clamp(2rem, 8vw, 4rem);
+    color: #d17300;
+    text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.5);
+    animation: pulse 2s infinite;
+}
+
+/* Timer Box Styling */
+.timer-box {
+    padding: 20px;
+    background-color: #fff;
+    border-radius: 8px;
+    border: 2px solid #ff5722;
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    gap: 15px;
+    margin-top: 20px;
+    max-width: 400px;
+}
+
+.countdown-value {
+    font-size: clamp(1.5rem, 6vw, 2rem);
+    font-weight: bold;
+    color: #ff5722;
+}
+
+/* Hide main content by default */
+header, main {
+    display: none;
+}
+
+/* On screens with a .festival class, hide pre-festival content and show main content */
+body.festival .pre-festival-content {
+    display: none;
+}
+
+body.festival header,
+body.festival main {
+    display: block;
+}
+
+/* Header Section */
+header {
+    height: 100vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+    position: relative;
+    background: linear-gradient(to top, rgba(255, 165, 0, 0.5), rgba(255, 0, 0, 0.5)), url('https://source.unsplash.com/1600x900/?indian-festival,navratri-celebration') no-repeat center center/cover;
+    color: white;
+    text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.5);
+    z-index: 1;
+}
+
+/* Header Text */
+.header-content {
+    z-index: 2;
+}
+
+.main-title {
+    font-family: 'Dancing Script', cursive;
+    font-size: clamp(3rem, 10vw, 5rem);
+    font-weight: 700;
+    margin: 0;
+    animation: fadeInScale 2s ease-in-out forwards;
+}
+
+.subtitle {
+    font-size: clamp(1rem, 4vw, 1.5rem);
+    margin-top: 10px;
+    animation: fadeIn 2.5s ease-in-out forwards;
+}
+
+/* New Dussehra Wish Style */
+.dussehra-wish {
+    font-family: 'Dancing Script', cursive;
+    font-size: clamp(2rem, 6vw, 3rem);
+    color: white;
+    text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.5);
+    margin-top: 10px;
+    display: none; /* Hidden by default */
+}
+
+/* Floating Diya Animation */
+.diya {
+    position: absolute;
+    width: 50px;
+    height: 50px;
+    background: url('data:image/svg+xml;utf8,<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 512 512"><path fill="%23ffd700" d="M256 0C114.6 0 0 114.6 0 256s114.6 256 256 256 256-114.6 256-256S397.4 0 256 0zm0 464c-114.9 0-208-93.1-208-208S141.1 48 256 48s208 93.1 208 208-93.1 208-208 208z"/><path fill="%23ff8c00" d="M256 128c-79.5 0-144 64.5-144 144s64.5 144 144 144 144-64.5 144-144-64.5-144-144-144zm0 240c-52.9 0-96-43.1-96-96s43.1-96 96-96 96 43.1 96 96-43.1 96-96 96z"/></svg>') no-repeat center center/contain;
+    opacity: 0;
+    z-index: 0;
+}
+
+/* New animation to both appear and float */
+.diya.animate {
+    animation-name: appearAndFloat;
+    animation-duration: 10s;
+    animation-timing-function: ease-in-out;
+    animation-iteration-count: infinite;
+    animation-fill-mode: forwards;
+}
+
+/* Individual diya positioning and animation delays */
+.diya1 { top: 20%; left: 10%; animation-delay: 1s; }
+.diya2 { top: 50%; left: 80%; animation-delay: 3s; }
+.diya3 { top: 70%; left: 30%; animation-delay: 5s; }
+.diya4 { top: 10%; left: 60%; animation-delay: 7s; }
+
+/* Main Content Section */
+main {
+    padding: 40px 15px;
+    text-align: center;
+    background-color: #fff;
+    transition: none;
+}
+
+.main-message h2 {
+    font-size: clamp(1.8rem, 5vw, 2.5rem);
+    color: #d17300;
+}
+
+.main-message p {
+    max-width: 800px;
+    margin: 0 auto 30px;
+    line-height: 1.6;
+}
+
+/* Personalized Greeting Section */
+.name-input-section {
+    margin-bottom: 30px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 10px;
+}
+
+#userNameInput {
+    padding: 10px;
+    font-size: 1rem;
+    border: 2px solid #ccc;
+    border-radius: 5px;
+    width: 80%;
+    max-width: 250px;
+    text-align: center;
+}
+
+#personalizeBtn {
+    padding: 10px 20px;
+    font-size: 1rem;
+    background-color: #ff5722;
+    color: white;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    transition: background-color 0.3s ease;
+}
+
+#personalizeBtn:hover {
+    background-color: #e04b1e;
+}
+
+/* Countdown & Day Tracker Container */
+.day-tracker-container {
+    padding: 20px;
+    background-color: #fceabb;
+    border-radius: 10px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    max-width: 600px;
+    margin: 0 auto;
+    transition: none;
+}
+
+.status-message {
+    font-size: clamp(1rem, 3vw, 1.2rem);
+    font-weight: bold;
+    color: #333;
+    margin-bottom: 15px;
+}
+
+/* Day Tracker Grid */
+.days-grid {
+    display: grid;
+    grid-template-columns: repeat(6, 1fr);
+    gap: 15px;
+    margin-top: 20px;
+}
+
+.day-item {
+    background-color: #fff;
+    border: 2px solid #ccc;
+    border-radius: 50%;
+    width: clamp(50px, 15vw, 60px);
+    height: clamp(50px, 15vw, 60px);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    font-weight: bold;
+    color: #d17300;
+    cursor: pointer;
+    transition: transform 0.3s ease, border-color 0.3s ease;
+    font-size: 1.2rem;
+}
+
+.day-item:hover {
+    transform: scale(1.1);
+    border-color: #ff5722;
+}
+
+.day-item.active-day {
+    background-color: #ff5722;
+    color: white;
+    border-color: #ff5722;
+    box-shadow: 0 0 10px #ff5722, inset 0 0 5px white;
+    animation: pulse 1.5s infinite;
+}
+
+/* New Devi Darshan Section */
+.devi-darshan-section {
+    max-width: 600px;
+    margin: 40px auto 20px;
+    padding: 20px;
+    background-color: #f8e1a3;
+    border-radius: 10px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    text-align: left;
+    transition: none;
+}
+
+/* New Devi Image Style */
+#devi-image {
+    display: block;
+    margin: 0 auto 20px;
+    max-width: 100%;
+    height: auto;
+    border-radius: 8px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+    border: 3px solid #fff;
+    transition: transform 0.3s ease-in-out;
+}
+
+#devi-image:hover {
+    transform: scale(1.03);
+}
+
+.devi-darshan-section h3 {
+    text-align: center;
+    font-family: 'Dancing Script', cursive;
+    font-size: 2.5rem;
+    color: #d17300;
+    margin-top: 0;
+}
+
+.devi-darshan-section p {
+    font-size: 1rem;
+    line-height: 1.6;
+}
+
+.devi-darshan-section p#devi-mantra {
+    font-style: italic;
+    font-weight: 500;
+    color: #555;
+    margin-top: 15px;
+}
+
+/* Informational Note Section */
+.info-note {
+    max-width: 600px;
+    margin: 30px auto;
+    padding: 15px;
+    background-color: #fff8e8;
+    border-left: 5px solid #ffc107;
+    border-radius: 5px;
+    text-align: left;
+    font-size: 0.9rem;
+    color: #555;
+    transition: none;
+}
+
+/* Footer Section */
+footer {
+    text-align: center;
+    padding: 20px;
+    background-color: #333;
+    color: white;
+    font-size: 0.9rem;
+}
+
+/* Share Buttons */
+.share-container {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 15px;
+    margin-bottom: 20px;
+}
+
+.share-button {
+    font-size: clamp(1.5rem, 4vw, 2rem);
+    color: #fff;
+    transition: transform 0.3s ease, color 0.3s ease;
+}
+
+.share-button:hover {
+    transform: scale(1.2);
+}
+
+.fa-whatsapp { color: #25d366; }
+.fa-facebook { color: #3b5998; }
+.fa-x-twitter { color: #000; }
+.fa-instagram { 
+    background: radial-gradient(circle at 30% 107%, #fdf497 0%, #fdf497 5%, #fd5949 45%, #d6249f 60%, #285AEB 90%);
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+}
+
+
+/* Keyframe Animations */
+@keyframes fadeInScale {
+    from {
+        opacity: 0;
+        transform: scale(0.8);
+    }
+    to {
+        opacity: 1;
+        transform: scale(1);
+    }
+}
+
+@keyframes fadeIn {
+    from {
+        opacity: 0;
+    }
+    to {
+        opacity: 1;
+    }
+}
+
+@keyframes appearAndFloat {
+    0% { opacity: 0; transform: translateY(0); }
+    10% { opacity: 1; transform: translateY(0); }
+    50% { transform: translateY(-50px); }
+    100% { transform: translateY(0); }
+}
+
+@keyframes pulse {
+    0% { transform: scale(1); }
+    50% { transform: scale(1.1); }
+    100% { transform: scale(1); }
+}
