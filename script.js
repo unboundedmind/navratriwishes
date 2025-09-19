@@ -8,7 +8,7 @@ const navratriGoddesses = [
     { name: 'Maa Shailaputri', description: 'The first form of Durga, worshipped on Day 1. She is the daughter of the mountains and represents nature.', mantra: 'ॐ देवी शैलपुत्र्यै नमः', image: 'images/shailaputri.png' },
     { name: 'Maa Brahmacharini', description: 'Worshipped on Day 2, she represents penance, celibacy, and devotion.', mantra: 'ॐ देवी ब्रह्मचारिण्यै नमः', image: 'images/brahmacharini.jpg' },
     { name: 'Maa Chandraghanta', description: 'The third form of Durga, worshipped on Day 3. She is a symbol of peace and tranquility.', mantra: 'ॐ देवी चन्द्रघण्टायै नमः', image: 'images/chandraghanta.jpg' },
-    { name: 'Maa Kushmanda', description: 'The fourth form of Durga, worshipped on Day 4. She is believed to have created the universe with her divine laughter.', mantra: 'ॐ देवी कूष्माण्डायै नमः', image: 'images/kushmanda.jpg' },
+    { name: 'Maa Kushmanda', description: 'The fourth form of Durga, worshipped on Day 4. She is believed to have created the universe with her divine laughter.', mantra: 'ॐ देवी कूष्माण्डायै नमः', image: 'images/kushmanda.webp' },
     { name: 'Maa Skandamata', description: 'Worshipped on Day 5, she is the mother of Skanda (Lord Kartikeya). She represents love and compassion.', mantra: 'ॐ देवी स्कन्दमातायै नमः', image: 'images/skandamata.jpg' },
     { name: 'Maa Katyayani', description: 'The sixth form of Durga, worshipped on Day 6. She is a symbol of courage and strength.', mantra: 'ॐ देवी कात्यायन्यै नमः', image: 'images/katyayani.jpg' },
     { name: 'Maa Kaalratri', description: 'Worshipped on Day 7, she is the fierce and destructive form of Durga, who kills all evil.', mantra: 'ॐ देवी कालरात्र्यै नमः', image: 'images/kaalratri.jpg' },
