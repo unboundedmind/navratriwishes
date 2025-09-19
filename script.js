@@ -1,7 +1,7 @@
 // Set the official start and end dates for Navratri and the date for Dussehra
-const navratriStart = new Date('September 10, 2025 00:00:00').getTime();
-const navratriEnd = new Date('October 19, 2025 23:59:59').getTime();
-const dussehraDate = new Date('October 20, 2025 00:00:00').getTime();
+const navratriStart = new Date('September 22, 2025 00:00:00').getTime();
+const navratriEnd = new Date('October 01, 2025 23:59:59').getTime();
+const dussehraDate = new Date('October 02, 2025 00:00:00').getTime();
 
 // Data for the nine forms of Goddess Durga
 const navratriGoddesses = [
